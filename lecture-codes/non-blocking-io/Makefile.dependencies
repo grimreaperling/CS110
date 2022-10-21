@@ -1,0 +1,28 @@
+slow-alphabet-server.o: slow-alphabet-server.cc server-socket.h \
+  /usr/class/cs110/local/include/thread-pool-reference.h \
+  /usr/class/cs110/local/include/semaphore.h \
+  /usr/class/cs110/include/socket++/sockstream.h
+blocking-alphabet-client.o: blocking-alphabet-client.cc client-socket.h \
+  non-blocking-utils.h
+non-blocking-alphabet-client.o: non-blocking-alphabet-client.cc \
+  client-socket.h non-blocking-utils.h
+load-large-file-blocking-descriptors.o: \
+  load-large-file-blocking-descriptors.cc non-blocking-utils.h
+load-large-file-non-blocking-descriptors.o: \
+  load-large-file-non-blocking-descriptors.cc non-blocking-utils.h
+outbound-file-test.o: outbound-file-test.cc outbound-file.h \
+  server-socket.h
+expensive-server.o: expensive-server.cc outbound-file.h server-socket.h \
+  non-blocking-utils.h
+expensive-server-test.o: expensive-server-test.cc \
+  /usr/class/cs110/local/include/thread-pool-reference.h \
+  /usr/class/cs110/local/include/semaphore.h
+steppenwolf-server.o: steppenwolf-server.cc \
+  /usr/class/cs110/include/socket++/sockstream.h server-socket.h \
+  non-blocking-utils.h
+efficient-server.o: efficient-server.cc server-socket.h \
+  non-blocking-utils.h
+efficient-server-test.o: efficient-server-test.cc \
+  /usr/class/cs110/include/socket++/sockstream.h client-socket.h \
+  /usr/class/cs110/local/include/thread-pool-reference.h \
+  /usr/class/cs110/local/include/semaphore.h
